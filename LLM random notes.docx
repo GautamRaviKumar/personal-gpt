@@ -3,7 +3,7 @@ Creating an LLM from scratch:
 So far:
 Input Text -> Tokenization 
 -> Token Embeddings + Positional Embeddings
--> [Transformer Block] × N layers
+-> [Transformer Block] Ã— N layers
 -> Final LayerNorm
 -> Linear Projection (vocab_size)
 -> Softmax
@@ -17,8 +17,8 @@ Text prediction:
 previous token -> convert to token ID -> obtain probability row vector via softmax, index of highest probability via argmax -> map to token text
 
 Possible improvements and questions:
-Words can have multiple meanings (polysemy), and different words can have the same meaning (synonyms)
-Can 1 word have different embeddings for each meaning? Should synonyms have the same token embeddings? 
+Words and sentences can have multiple meanings (polysemy), and different words can have the same meaning (synonyms)
+Can 1 word or sentence have different embeddings for each meaning? Should synonyms have the same/similar token embeddings? 
 Can logits use grammar predictions to reduce search length, or does it need the whole vocabulary?
 Is softmax necessary to decode outputs? Seems redundant
-untrained gpt 2 model spouts gibberish text, including words that dont exist. why is that?
+untrained gpt 2 model spouts gibberish text, including words that dont exist. why is that? seems that tokens arent necessarily words. should they be?

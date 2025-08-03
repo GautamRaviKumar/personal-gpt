@@ -17,6 +17,7 @@ Text prediction:
 previous token -> convert to token ID -> obtain probability row vector via softmax, index of highest probability via argmax -> map to token text
 
 Possible improvements and questions:
+Can LLMs 'understand meaning'? getting conflicting answers here
 Words and sentences can have multiple meanings (polysemy), and different words can have the same meaning (synonyms)
 Can 1 word or sentence have different embeddings for each meaning? Should synonyms have the same/similar token embeddings? 
 Can logits use grammar predictions to reduce search length, or does it need the whole vocabulary?

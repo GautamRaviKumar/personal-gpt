@@ -20,6 +20,7 @@ Possible improvements and questions:
 Can LLMs 'understand meaning'? getting conflicting answers here
 Words and sentences can have multiple meanings (polysemy), and different words can have the same meaning (synonyms)
 Can 1 word or sentence have different embeddings for each meaning? Should synonyms have the same/similar token embeddings? 
+Are tokens necessary at all? Or can words be converted directly vectors in the embedding layer?
 Can logits use grammar predictions to reduce search length, or does it need the whole vocabulary?
 Is softmax necessary to decode outputs? Seems redundant
 untrained gpt 2 model spouts gibberish text, including words that dont exist. why is that? seems that tokens arent necessarily words. should they be?
